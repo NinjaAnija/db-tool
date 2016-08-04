@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+namespace NinjaAnija\DbTool;
+
+require_once 'vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+$application->add(new GetSchemaCommand);
+$application->add(new GetDiffCommand);
+$application->run();
